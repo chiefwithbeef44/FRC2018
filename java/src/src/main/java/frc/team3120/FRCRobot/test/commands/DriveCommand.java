@@ -38,7 +38,7 @@ public class DriveCommand extends Command
         rPower *= throttle;
 
         double[] powers = Utilities.scalePower(lPower, rPower);
-        Robot.Drive.setPower(powers[0], powers[1], SubDrive.enabled);
+        Robot.Drive.setPower(powers[0], powers[1], SubDrive.enable);
     }
     @Override
     protected boolean isFinished()

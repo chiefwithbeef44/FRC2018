@@ -5,7 +5,7 @@ import src.main.java.frc.team3120.FRCRobot.test.RobotMap;
 
 public class SubDrive extends Drive
 {
-    public static boolean enabled;
+    public static boolean enable;
 
     private static Drive master = new Drive();
 
@@ -13,7 +13,7 @@ public class SubDrive extends Drive
         master.lMotor = new Spark(RobotMap.LMotor);
         master.rMotor = new Spark(RobotMap.RMotor);
         master.lMotor.setInverted(true);
-        enabled = false;
+        enable = false;
     }
 
     public static void Enabled(){
@@ -21,6 +21,6 @@ public class SubDrive extends Drive
         master.brMotor = new Spark(RobotMap.BRMotor);
         master.blMotor = new Spark(RobotMap.BLMotor);
         master.brMotor.setInverted(true);
-        enabled = true;
+        enable = true;
     }
 }
