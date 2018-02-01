@@ -19,8 +19,6 @@ public class DriveCommand extends Command
         double throttle = -Robot.oi.joystick1.getThrottle() * 0.5 + 0.5;
         double lPower = 0;
         double rPower = 0;
-        double blpower = 0;
-
 
         if(Math.abs(y) > Robot.oi.threshold)
         {

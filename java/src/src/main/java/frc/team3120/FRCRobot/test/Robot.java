@@ -8,6 +8,11 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import src.main.java.frc.team3120.FRCRobot.controllers.Camera;
 import src.main.java.frc.team3120.FRCRobot.partstest.ColorTest;
+import src.main.java.frc.team3120.FRCRobot.partstest.MotorTest;
+import src.main.java.frc.team3120.FRCRobot.partstest.NavXTest;
+import src.main.java.frc.team3120.FRCRobot.test.commands.DriveCommand;
+import src.main.java.frc.team3120.FRCRobot.test.commands.PneumaticsCommand;
+import src.main.java.frc.team3120.FRCRobot.test.commands.TwoDriveCommand;
 import src.main.java.frc.team3120.FRCRobot.test.subsystems.Drive;
 import src.main.java.frc.team3120.FRCRobot.test.subsystems.Pneumatics;
 import src.main.java.frc.team3120.FRCRobot.test.subsystems.TwoMotorDrive;
@@ -41,11 +46,11 @@ public class Robot extends IterativeRobot {
 	{
 		oi = new OI();
 		teleOpChooser.addDefault("CameraTest", new ColorTest());
-//		teleOpChooser.addObject("Pneumatics Test", new PneumaticsCommand());
+		teleOpChooser.addObject("Pneumatics Test", new PneumaticsCommand());
 //		teleOpChooser.addObject("Motor Test", new MotorTest());
 //		teleOpChooser.addObject("NavX Test", new NavXTest());
 //		teleOpChooser.addObject("DriveTest", new TwoDriveCommand());
-		
+		teleOpChooser.addObject("newDriveTest", new DriveCommand());
 //		CommandGroup teleopCommand = new CommandGroup();//		teleopCommand.addParallel(new PneumaticsCommand());
 //		teleopCommand.addParallel(new TwoDriveCommand());
 //		teleOpChooser.addDefault("TeleOp Main", teleopCommand);
