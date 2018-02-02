@@ -2,7 +2,7 @@ package src.main.java.frc.team3120.FRCRobot.test.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 import src.main.java.frc.team3120.FRCRobot.test.Robot;
-import src.main.java.frc.team3120.FRCRobot.test.subsystems.SubDrive;
+import src.main.java.frc.team3120.FRCRobot.test.subsystems.Drive;
 import src.main.java.frc.team3120.FRCRobot.utils.Utilities;
 
 
@@ -36,7 +36,7 @@ public class DriveCommand extends Command
         rPower *= throttle;
 
         double[] powers = Utilities.scalePower(lPower, rPower);
-        Robot.Drive.setPower(powers[0], powers[1], SubDrive.enable);
+        Robot.Drive.setPower(powers[0], powers[1], Drive.SubDrive.enable);
     }
     @Override
     protected boolean isFinished()
