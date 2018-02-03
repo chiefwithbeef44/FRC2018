@@ -38,7 +38,8 @@ public class Drive extends Subsystem
 
     @Override
     protected void initDefaultCommand(){}
-    public static class SubDrive extends Drive
+
+    public static class SubDrive
     {
         public static boolean enable;
 
