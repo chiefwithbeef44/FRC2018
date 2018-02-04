@@ -20,7 +20,7 @@ public class Drive extends Subsystem
         }
     }
 
-    Drive() {}
+    Drive(){}
 
     public void setPower(double lpower, double rpower, boolean fourEnabled)
     {
@@ -45,14 +45,16 @@ public class Drive extends Subsystem
 
         private static Drive master = new Drive();
 
-        public static void Disabled(){
+        public static void Disabled()
+        {
             master.lMotor = new Spark(RobotMap.LMotor);
             master.rMotor = new Spark(RobotMap.RMotor);
             master.lMotor.setInverted(true);
             enable = false;
         }
 
-        public static void Enabled(){
+        public static void Enabled()
+        {
             Drive.SubDrive.Disabled();
             master.brMotor = new Spark(RobotMap.BRMotor);
             master.blMotor = new Spark(RobotMap.BLMotor);
