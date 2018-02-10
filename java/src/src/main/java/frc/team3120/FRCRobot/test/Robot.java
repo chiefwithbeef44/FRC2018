@@ -45,7 +45,7 @@ public class Robot extends IterativeRobot {
 	public void robotInit() 
 	{
 		oi = new OI();
-		teleOpChooser.addDefault("CameraTest", new ColorTest());
+//		teleOpChooser.addDefault("CameraTest", new ColorTest());
 		teleOpChooser.addObject("Pneumatics Test", new PneumaticsCommand());
 //		teleOpChooser.addObject("Motor Test", new MotorTest());
 //		teleOpChooser.addObject("NavX Test", new NavXTest());

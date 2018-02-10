@@ -6,7 +6,8 @@ package src.main.java.frc.team3120.FRCRobot.test;
  * the wiring easier and significantly reduces the number of magic numbers
  * floating around.
  */
-public class RobotMap {
+public class RobotMap
+{
 	// For example to map the left and right motors, you could define the
 	// following variables to use with your drivetrain subsystem.
 	// public static int leftMotor = 1;
@@ -26,6 +27,7 @@ public class RobotMap {
 	public static int RMotor = 1;
 	public static int BLMotor = 2;
 	public static int BRMotor = 3;
+
 	public static int susan_one = 2;
 	public static int susan_two = 4;
 }
