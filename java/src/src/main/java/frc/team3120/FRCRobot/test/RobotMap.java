@@ -26,4 +26,6 @@ public class RobotMap {
 	public static int RMotor = 1;
 	public static int BLMotor = 2;
 	public static int BRMotor = 3;
+	public static int susan_one = 2;
+	public static int susan_two = 4;
 }

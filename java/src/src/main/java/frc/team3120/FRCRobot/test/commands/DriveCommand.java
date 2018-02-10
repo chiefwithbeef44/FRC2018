@@ -19,6 +19,7 @@ public class DriveCommand extends Command
         double throttle = -Robot.oi.joystick1.getThrottle() * 0.5 + 0.5;
         double lPower = 0;
         double rPower = 0;
+        double sPower = 0;
 
         if(Math.abs(y) > Robot.oi.threshold)
         {
@@ -28,15 +29,16 @@ public class DriveCommand extends Command
 
         if(Math.abs(twist) > Robot.oi.threshold)
         {
-            lPower += twist;
-            rPower -= twist;
+            sPower = twist;
         }
 
         lPower *= throttle;
         rPower *= throttle;
+        sPower *= throttle;
 
         double[] powers = Utilities.scalePower(lPower, rPower);
         Robot.Drive.setPower(powers[0], powers[1], Drive.SubDrive.enable);
+        Robot.Drive.setSusanPower(sPower);
     }
     @Override
     protected boolean isFinished()

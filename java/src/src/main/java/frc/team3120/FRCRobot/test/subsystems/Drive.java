@@ -10,6 +10,7 @@ public class Drive extends Subsystem
     public Spark rMotor;
     public Spark blMotor;
     public Spark brMotor;
+    public Spark susan;
 
     public Drive(boolean fourMotors)
     {
@@ -36,6 +37,8 @@ public class Drive extends Subsystem
         }
     }
 
+    public void setSusanPower(double power){susan.set(power);}
+
     @Override
     protected void initDefaultCommand(){}
 
@@ -49,16 +52,20 @@ public class Drive extends Subsystem
         {
             master.lMotor = new Spark(RobotMap.LMotor);
             master.rMotor = new Spark(RobotMap.RMotor);
+            master.susan = new Spark(RobotMap.susan_one);
             master.lMotor.setInverted(true);
             enable = false;
         }
 
         public static void Enabled()
         {
-            Drive.SubDrive.Disabled();
+            master.lMotor = new Spark(RobotMap.LMotor);
+            master.rMotor = new Spark(RobotMap.RMotor);
             master.brMotor = new Spark(RobotMap.BRMotor);
             master.blMotor = new Spark(RobotMap.BLMotor);
+            master.susan = new Spark(RobotMap.susan_two);
             master.brMotor.setInverted(true);
+            master.lMotor.setInverted(true);
             enable = true;
         }
     }
